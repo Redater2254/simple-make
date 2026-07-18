@@ -1,0 +1,12 @@
+{
+  "name": "simple-make",
+  "version": "1.0.0",
+  "description": "프로그램 아이디어를 받아 후보 파이프라인을 장단점과 함께 제시하고, 선택된 스택으로 설계 문서를 작성한 뒤 구현까지 진행합니다.",
+  "author": {
+    "name": "lazyyushin"
+  },
+  "license": "MIT",
+  "skills": [
+    "./skills/simple-make"
+  ]
+}

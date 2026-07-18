@@ -1,0 +1,7 @@
+# 평가 워크스페이스나 로컬 산출물이 섞여 들어가지 않도록
+*-workspace/
+DESIGN.md
+node_modules/
+__pycache__/
+*.skill
+.DS_Store
