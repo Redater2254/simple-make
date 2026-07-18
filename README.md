@@ -13,12 +13,14 @@ concrete enough to build from — and builds it.
 
 ## 설치 / Install
 
+### Claude Code
+
 ```bash
 claude plugin marketplace add Redater2254/simple-make
 claude plugin install simple-make
 ```
 
-Claude Code 세션 안에서 설치하려면:
+세션 안에서 설치하려면:
 
 ```
 /plugin marketplace add Redater2254/simple-make
@@ -26,6 +28,37 @@ Claude Code 세션 안에서 설치하려면:
 ```
 
 업데이트는 `claude plugin update simple-make`.
+
+### Codex
+
+```bash
+codex plugin marketplace add Redater2254/simple-make
+codex plugin install simple-make
+```
+
+세션 안에서는 `/plugins`를 실행하면 플러그인 브라우저가 열립니다. 거기서
+`simple-make`를 찾아 설치하고, 설치된 항목 위에서 Space로 켜고 끌 수 있습니다.
+
+> **검증 상태 안내.** Claude Code 설치는 실제로 등록·설치·로드까지 확인했습니다.
+> Codex 쪽은 공식 문서의 플러그인 규격(`.codex-plugin/plugin.json` + `skills/`,
+> 마켓플레이스 매니페스트는 `.agents/plugins/marketplace.json`)에 맞춰 구성했지만,
+> 제작 환경에 Codex가 없어 실제 로드까지는 확인하지 못했습니다.
+> 동작하지 않으면 이슈로 알려주시면 고치겠습니다.
+>
+> **Verification status.** The Claude Code path is tested end to end — added,
+> installed, and loaded. The Codex manifests follow the documented plugin format
+> but have not been loaded in a real Codex install; please open an issue if it
+> fails.
+
+### 그 외 도구 / Other harnesses
+
+`skills/simple-make/`는 프론트매터가 붙은 마크다운일 뿐이라 특정 도구에 묶여 있지
+않습니다. 스킬을 읽는 도구라면 폴더를 해당 도구의 스킬 경로에 복사하는 것만으로도
+동작합니다.
+
+The skill body is just Markdown with frontmatter — nothing in it is tied to a
+particular harness. Copying `skills/simple-make/` into any tool's skills
+directory should work.
 
 ## 사용 / Usage
 
