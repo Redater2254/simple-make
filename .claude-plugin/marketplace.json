@@ -11,11 +11,7 @@
     {
       "name": "simple-make",
       "description": "프로그램 아이디어를 받아 후보 파이프라인을 장단점과 함께 제시하고, 선택된 스택으로 마크다운 설계 문서를 작성한 뒤 구현까지 진행합니다. Turns a rough build request into a chosen tech pipeline, a concrete design document, and the implementation that follows.",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/simple-make"
-      ]
+      "source": "./"
     }
   ]
 }
