@@ -50,6 +50,31 @@ codex plugin install simple-make
 > but have not been loaded in a real Codex install; please open an issue if it
 > fails.
 
+### 파일 하나로 쓰기 / Single file, no plugin
+
+플러그인 설치가 번거롭거나 다른 도구에서 쓰고 싶다면
+[`standalone/SKILL.md`](standalone/SKILL.md) 하나만 받아서 스킬 폴더에 넣으면 됩니다.
+
+```bash
+mkdir -p ~/.claude/skills/simple-make
+curl -o ~/.claude/skills/simple-make/SKILL.md \
+  https://raw.githubusercontent.com/Redater2254/simple-make/main/standalone/SKILL.md
+```
+
+전체판과의 차이는 **파이프라인 카탈로그(`references/pipelines.md`)가 빠진 것** 하나입니다.
+카탈로그는 후보 스택을 고를 때 참고하는 목록인데, 모델이 이미 아는 내용이고
+전체판에서도 "출발점이지 제약이 아니다"라고 명시하고 있습니다. 대신 고르는 *관점*을
+단일 파일 안에 압축해 넣었으므로, 판단의 질은 거의 그대로입니다.
+
+오히려 컨텍스트는 더 가볍습니다 — 문서 템플릿을 안에 담고도 11KB로, 전체판의
+`SKILL.md`(12.3KB)보다 작습니다. 전체판은 필요할 때 카탈로그 13KB를 추가로 읽습니다.
+
+The only thing the standalone edition drops is the pipeline catalog — a reference
+list the model largely knows anyway, and which the full edition itself calls "a
+starting point, not a constraint". The *method* for choosing is compressed into
+the single file, so the quality of the judgment is largely unchanged. It is in
+fact lighter in context than the full edition's `SKILL.md` alone.
+
 ### 그 외 도구 / Other harnesses
 
 `skills/simple-make/`는 프론트매터가 붙은 마크다운일 뿐이라 특정 도구에 묶여 있지
