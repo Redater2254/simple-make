@@ -14,16 +14,18 @@ concrete enough to build from — and builds it.
 ## 설치 / Install
 
 ```bash
-claude plugin marketplace add <your-github-username>/simple-make-skill
+claude plugin marketplace add Redater2254/simple-make
 claude plugin install simple-make
 ```
 
 Claude Code 세션 안에서 설치하려면:
 
 ```
-/plugin marketplace add <your-github-username>/simple-make-skill
+/plugin marketplace add Redater2254/simple-make
 /plugin
 ```
+
+업데이트는 `claude plugin update simple-make`.
 
 ## 사용 / Usage
 
